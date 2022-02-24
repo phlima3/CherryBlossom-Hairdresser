@@ -15,4 +15,4 @@ for (const link of links) {
   link.addEventListener('click', function () {
     nav.classList.remove('show')
   })
-} /* Adiciona uma função aos botões de menu para abrir e fechar menu */
+}
