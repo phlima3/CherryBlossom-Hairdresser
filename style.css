@@ -412,15 +412,6 @@ nav.show div.icon-close {
   padding: 4rem 1rem;
 }
 
-.swiper-pagination-bullet {
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.swiper-pagination-bullet-active {
-  background: var(--base-color);
-}
-
 /*====  CONTACT ============================ */
 #contact .grid {
   gap: 4rem;
