@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -12,9 +16,6 @@ a {
 img {
   width: 100%;
   height: auto;
-}
-li {
-  list-style: none;
 }
 
 /*====  VARIABLES ============================ */
@@ -33,8 +34,7 @@ li {
   --body-color: hsl(0 0% 98%);
 }
 
-/*====  BASE ============================ */
-
+/*===  BASE ============================ */
 html {
   scroll-behavior: smooth;
 }
@@ -85,6 +85,7 @@ body {
     hsla(var(--hue), 36%, 57%, 1)
   );
 }
+
 /*====  LAYOUT ============================ */
 .container {
   margin-left: 1.5rem;
@@ -99,17 +100,24 @@ body {
 .section {
   padding: 5rem 0;
 }
+
 .section .title {
   margin-bottom: 1rem;
 }
+
 .section header {
   margin-bottom: 4rem;
+}
+
+.section header strong {
+  color: var(--base-color);
 }
 
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
   display: flex;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -117,9 +125,11 @@ body {
   background-color: var(--body-color);
   width: 100%;
 }
-#header .scroll {
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+
+#header.scroll {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
+
 main {
   margin-top: calc(var(--header-height) + 2rem);
 }
@@ -147,26 +157,32 @@ nav ul li {
   text-align: center;
 }
 
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+
 nav ul li a:hover {
   color: var(--base-color);
 }
-nav ul li a {
-  transition: color 0.3s;
-  position: relative;
-}
+
 nav ul li a::after {
   content: '';
   width: 0%;
   height: 2px;
   background: var(--base-color);
+
   position: absolute;
   left: 0;
   bottom: -1.5rem;
+
   transition: width 0.2s;
 }
+
 nav ul li a:hover::after {
   width: 100%;
 }
+
 nav .menu {
   opacity: 0;
   visibility: hidden;
@@ -177,16 +193,21 @@ nav .menu {
 nav .menu ul {
   display: none;
 }
+
 /* Mostrar menu */
 nav.show .menu {
   opacity: 1;
   visibility: visible;
+
   background: var(--body-color);
+
   height: 100vh;
   width: 100vw;
+
   position: fixed;
   top: 0;
   left: 0;
+
   display: grid;
   place-content: center;
 }
@@ -194,24 +215,29 @@ nav.show .menu {
 nav.show .menu ul {
   display: grid;
 }
+
 nav.show ul.grid {
   gap: 4rem;
 }
 
-/* toggle menu  */
+/* toggle menu */
 .toggle {
   color: var(--base-color);
-  font-size: 1.5 rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
+
 nav .icon-close {
   visibility: hidden;
   opacity: 0;
+
   position: absolute;
-  right: 1.5rem;
   top: -1.5rem;
+  right: 1.5rem;
+
   transition: 0.2s;
 }
+
 nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
@@ -266,10 +292,11 @@ nav.show div.icon-close {
   margin-bottom: 2rem;
 }
 
-/*====ABOUT ============================ */
+/*====  ABOUT ============================ */
 #about {
   background: white;
 }
+
 #about .container {
   margin: 0;
 }
@@ -303,11 +330,11 @@ nav.show div.icon-close {
   margin-right: 1.5rem;
 }
 
-/*====SERVICES============================ */
-
+/*====  SERVICES ============================ */
 .cards.grid {
   gap: 1.5rem;
 }
+
 .card {
   padding: 3.625rem 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
@@ -322,19 +349,34 @@ nav.show div.icon-close {
   font-size: 5rem;
   color: var(--base-color);
 }
+
 .card .title {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
 }
-/*=========== TESTMONIALS ============ */
-#tesmonials {
+
+/*====  TESTIMONIALS ============================ */
+#testimonials {
   background: white;
 }
-#testmonials blockquote {
+
+#testimonials .container {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#testimonials header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+}
+
+#testimonials blockquote {
   padding: 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-radius: 0.25rem;
 }
+
 #testimonials blockquote p {
   position: relative;
   text-indent: 1.875rem;
@@ -349,15 +391,59 @@ nav.show div.icon-close {
   left: -1.875rem;
   color: var(--base-color);
 }
-#testimonials blockquote cite {
+
+#testimonials cite {
   display: flex;
   align-items: center;
   font-style: normal;
 }
-#testimonials blockquote cite img {
+
+#testimonials cite img {
   width: 2rem;
   height: 2rem;
   object-fit: cover;
   clip-path: circle();
   margin-right: 0.5rem;
+}
+
+/* swiper */
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
+
+/*====  CONTACT ============================ */
+#contact .grid {
+  gap: 4rem;
+}
+#contact .text p {
+  margin-bottom: 2rem;
+}
+
+#contact .button i,
+#contact ul li i {
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+
+#contact ul.grid {
+  gap: 2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+
+#contact ul li i {
+  color: var(--base-color);
 }
