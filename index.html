@@ -18,6 +18,11 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header id="header">
@@ -138,62 +143,70 @@
       <div class="divider-1"></div>
 
       <!-- TESTIMONIALS -->
-      <section class="section" id="testmonials">
-        <div class="container grid">
+      <section class="section" id="testimonials">
+        <div class="container">
           <header>
-            <h2 class="title">Depoimentos de quem ja passou por aqui</h2>
+            <h2 class="title">Depoimentos de quem já passou por aqui</h2>
           </header>
-          <div class="testmonials">
-            <div class="testmonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span> Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Ullam corrupti recusandae nobis ab?
-                  Architecto
-                </p>
-                <cite>
-                  <img
-                    src="https://randomuser.me/api/portraits/women/43.jpg"
-                    alt=""
-                  />
-                  Wanessa Souza
-                </cite>
-              </blockquote>
+          <div class="testimonials swiper-container">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Rerum blanditiis saepe nam excepturi explicabo ipsa error
+                    ipsam neque
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/47.jpg"
+                      alt="Foto de Wanessa Souza"
+                    />
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Rerum blanditiis saepe nam excepturi explicabo ipsa error
+                    ipsam neque
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/64.jpg"
+                      alt="Foto de Franciele Venega"
+                    />
+                    Franciele Venega
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Rerum blanditiis saepe nam excepturi explicabo ipsa error
+                    ipsam neque
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/61.jpg"
+                      alt="Fotos de Valeska Fabris"
+                    />
+                    Valeska Fabris
+                  </cite>
+                </blockquote>
+              </div>
             </div>
 
-            <div class="testmonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span> Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Ullam corrupti recusandae nobis ab?
-                  Architecto
-                </p>
-                <cite>
-                  <img
-                    src="https://randomuser.me/api/portraits/women/26.jpg"
-                    alt=""
-                  />
-                  Franciele Venega
-                </cite>
-              </blockquote>
-            </div>
-
-            <div class="testmonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span> Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Ullam corrupti recusandae nobis ab?
-                  Architecto
-                </p>
-                <cite>
-                  <img
-                    src="https://randomuser.me/api/portraits/women/64.jpg"
-                    alt=""
-                  />
-                  Bruna Marquezine
-                </cite>
-              </blockquote>
-            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
