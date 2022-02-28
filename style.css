@@ -143,6 +143,14 @@ main {
 .logo span {
   color: var(--base-color);
 }
+.logo-alt {
+  font: 700 1.31rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+
+.logo-alt span {
+  color: var(--body-color);
+}
 
 /*====  NAVIGATION ============================ */
 nav {
@@ -443,4 +451,23 @@ nav.show div.icon-close {
 
 footer {
   background: var(--base-color);
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer .brand p {
+  color: var(--text-color-light);
+  font: 700 1rem 'DM Sans', sans-serif;
+  margin-bottom: 0.75rem;
+}
+
+footer i {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+}
+footer .social a {
+  margin-right: 2rem;
 }
