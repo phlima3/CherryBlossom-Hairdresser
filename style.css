@@ -438,3 +438,9 @@ nav.show div.icon-close {
 #contact ul li i {
   color: var(--base-color);
 }
+
+/*====  FOOTER ============================ */
+
+footer {
+  background: var(--base-color);
+}
