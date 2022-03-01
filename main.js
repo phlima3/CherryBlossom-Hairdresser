@@ -1,16 +1,16 @@
-/* Abre e fecha menu quando clica no incone */
+/*  abre e fecha o menu quando clicar no icone: hamburguer e x */
 const nav = document.querySelector('#header nav')
-const toggle =
-  document.querySelectorAll('nav .toggle') /*Declarei as constantes */
+const toggle = document.querySelectorAll('nav .toggle')
 
 for (const element of toggle) {
   element.addEventListener('click', function () {
     nav.classList.toggle('show')
-  }) /* Adiciona uma função aos botões de menu para abrir e fechar menu */
+  })
 }
 
-/*Quando clicar em um item do menu, esconder o menu */
+/* quando clicar em um item do menu, esconder o menu */
 const links = document.querySelectorAll('nav ul li a')
+
 for (const link of links) {
   link.addEventListener('click', function () {
     nav.classList.remove('show')
@@ -18,24 +18,22 @@ for (const link of links) {
 }
 
 /* mudar o header da página quando der scroll */
-
 function changeHeaderWhenScroll() {
   const header = document.querySelector('#header')
   const navHeight = header.offsetHeight
 
   if (window.scrollY >= navHeight) {
-    // scroll é Maior que a altura do header
+    // scroll é maior que a altura do header
     header.classList.add('scroll')
   } else {
-    //Menor que a altura do header
+    // menor que a altura do header
     header.classList.remove('scroll')
   }
 }
 
-/* Testmonial carousel slider swiper*/
-
+/* Testimonials carousel slider swiper */
 const swiper = new Swiper('.swiper-container', {
-  slidePerView: 1,
+  slidesPerView: 1,
   pagination: {
     el: '.swiper-pagination'
   },
@@ -63,9 +61,9 @@ scrollReveal.reveal(
 )
 
 /* Botão voltar para o topo */
-
 function backToTop() {
   const backToTopButton = document.querySelector('.back-to-top')
+
   if (window.scrollY >= 560) {
     backToTopButton.classList.add('show')
   } else {
@@ -73,7 +71,7 @@ function backToTop() {
   }
 }
 
-/* Quando rolar a página */
+/* When Scroll */
 window.addEventListener('scroll', function () {
   changeHeaderWhenScroll()
   backToTop()
